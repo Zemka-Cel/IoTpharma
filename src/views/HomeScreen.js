@@ -49,20 +49,19 @@ class HomeScreen extends React.Component {
     state = { data: [] };
 
     componentDidMount() {
-      fetch('https://api.thingspeak.com/channels/1064445/feeds.json?results=2/')
+      fetch('https://api.thingspeak.com/channels/1064445/fields/1.json?results=1&SBN517D6DY76WTTY')
         .then(response => response.json())
-        .then(data =>
-          this.setState({data: data.field1})
-        );
+        .then((data) =>{
+          this.setState({data: data.field1})}
+        )
+        .catch(console.log)
     }
 
     render() {
       return (
         <div>
           <ul>
-            {this.state.data.map(el => (
-              <li>{el.field1}</li>
-            ))}
+            {this.state.data.map(s=>(<li>{s}</li>))}
           </ul>
         </div>
       );
