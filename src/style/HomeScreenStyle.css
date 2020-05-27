@@ -37,18 +37,15 @@ nav{
 }
 
 .button{
-    display: inline-block;
     padding: 0.5em;
     border-radius: 20px;
-display: flex;
-justify-content: center;
     background-color: #6ab04c;
     margin-top: 50px;
     margin-bottom: 50px;
+    font-size: 18px !important;
+  
 }
 
 button{
-    display: inline-block;
-    font-size: 18px !important;
-
+  
 }

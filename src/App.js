@@ -40,7 +40,7 @@ function App() {
         </div>
       </div>
       <nav className="navbar navbar-expand text-white" id="center">
-        &copy; Copyright Zemka Diplomski
+        &copy; Copyright - Azemina Celebic 2020
       </nav>
     </BrowserRouter>
   );
