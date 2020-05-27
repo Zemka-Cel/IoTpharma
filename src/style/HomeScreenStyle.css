@@ -1,0 +1,51 @@
+body{
+    background-color: #dff9fb;
+    
+}
+
+#distance{
+    background-color: #4834d4;
+    color: white;
+    margin: 0.3em;
+    font-size: larger;
+    
+}
+p{
+    padding: 1em;
+}
+
+#weight {
+    background-color: #ff7979;
+    color: white;
+    margin: 0.3em;
+    font-size: larger;
+
+
+}
+
+nav{
+    background-color: #535c68;
+   
+}
+
+#center{
+    display: flex;
+    justify-content:center;
+}
+
+.button{
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 20px;
+display: flex;
+justify-content: center;
+    background-color: #6ab04c;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button{
+    display: inline-block;
+    font-size: 18px !important;
+
+}

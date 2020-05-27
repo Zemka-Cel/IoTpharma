@@ -14,19 +14,21 @@ function App() {
   return (
     <BrowserRouter>
     <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/HomeScreen" className="navbar-brand">
-          Home
-          </a>
+      <nav className="navbar navbar-expand text-white">
+      
         <div className="navbar-nav mr-auto">
-       
+        <li className="nav-item">
+            <Link to={"/HomeScreen"} className="nav-link text-white">
+            Home
+              </Link>
+          </li>
           <li className="nav-item">
-            <Link to={"/details"} className="nav-link">
+            <Link to={"/details"} className="nav-link text-white ">
               Details
               </Link>
           </li>
         </div>
-        <a href="/edit" className="navbar-brand">
+        <a href="/edit" className="nav-link text-white">
           Edit
           </a>
       </nav>
@@ -42,7 +44,11 @@ function App() {
         </Switch>
       </div>
     </div>
-
+    <nav className="navbar navbar-expand text-white" id="center">
+      
+        &copy; Copyright Zemka Diplomski
+      
+      </nav>
   </BrowserRouter>
   );
 }
