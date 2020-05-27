@@ -23,19 +23,19 @@ class HomeScreen extends React.Component {
     render() {
         return (
             <body>
-                <h1 className="text-center">Welcome to <br></br> IoT pharmacy</h1>
-                <p  className="text-center">Proof of concept</p>
+                <h1 className="text-center mt-5">Welcome to <br></br> IoT pharmacy</h1>
+                <p  className="text-center font-weight-bold">Proof of concept</p>
                 <main>
                 {this.state.distance.map((d) => (
                             <div id="distance"  className="text-center">
-                                <p><strong>Distance:</strong>  {d.field1} (cm)</p>
+                                <p><strong>Distance =</strong>  {d.field1} (cm)</p>
                              </div>
                              
                              ))}
 
 {this.state.distance.map((d) => (
                             <div id="weight" className="text-center">
-                                <p><strong>Weight:</strong> {d.field1} (gr)</p>
+                                <p><strong>Weight =</strong> {d.field1} (gr)</p>
                              </div>
                              
                              ))}

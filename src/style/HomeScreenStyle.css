@@ -1,24 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body{
+    font-family: 'Montserrat', sans-serif;
     background-color: #dff9fb;
     
 }
 
 #distance{
-    background-color: #4834d4;
+    background-color: #788994;
     color: white;
     margin: 0.3em;
     font-size: larger;
-    
+    border-radius: 5px;
 }
 p{
     padding: 1em;
 }
 
 #weight {
-    background-color: #ff7979;
+    background-color: #788994;
     color: white;
     margin: 0.3em;
     font-size: larger;
+    border-radius: 5px;
 
 
 }

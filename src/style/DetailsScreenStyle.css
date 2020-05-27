@@ -1,0 +1,20 @@
+.shelve{
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #130f40;
+        color: white;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+
+.prodDetails{
+    background-color: white;
+    list-style: none;
+    border-radius: 10px;
+    border: thin solid #95afc0;
+    
+}
