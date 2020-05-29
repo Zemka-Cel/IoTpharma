@@ -1,12 +1,15 @@
 import React from "react";
 import "../style/DetailsScreenStyle.css";
 import Axios from "axios";
+import products from "../service/api";
 
 class DetailsScreen extends React.Component {
   constructor() {
     super();
     this.state = {
       distance: [],
+      shelveOne: [],
+      shelveTwo: [],
     };
   }
 
@@ -16,58 +19,71 @@ class DetailsScreen extends React.Component {
     ).then((response) => {
       this.setState({ distance: response.data.feeds });
     });
+    Axios.get("http://localhost:4300/shelveOne").then((response) => {
+      this.setState({ shelveOne: response.data });
+    });
+    Axios.get("http://localhost:4300/shelveTwo").then((response) => {
+      this.setState({ shelveTwo: response.data });
+    });
   }
 
   render() {
     return (
       <body>
         <h3 className="text-center mb-4">Shelves Map</h3>
-        <div className="shelve font-weight-bold">A - 1: Aspirin</div>
-
-        <div className="prodDetails">
-          {this.state.distance.map((d) => (
-            <div className="pt-3 pb-3 ml-3">
-              <li>
-                <strong>Sensor data:</strong> {d.field1}
-              </li>
-              <li>
-                <strong>Product:</strong> Aspirin
-              </li>
-              <li>
-                <strong>Shelve height:</strong> 20 (cm)
-              </li>
-              <li className="mb-2">
-                <strong>Product height:</strong> 5 (cm)
-              </li>
-              <li>
-                <strong>Total:</strong> {(20 - d.field1)/5}
-              </li>
+        {this.state.shelveOne.map((p1) => (
+          <div>
+            <div className="shelve font-weight-bold">A - 1: {p1.name}</div>
+            <div className="prodDetails">
+              {this.state.distance.map((d) => (
+                <div className="pt-3 pb-3 ml-3">
+                  <li>
+                    <strong>Sensor data:</strong> {d.field1}
+                  </li>
+                  <li>
+                    <strong>Product:</strong> {p1.name}
+                  </li>
+                  <li>
+                    <strong>Shelve height:</strong> {p1.shelveHeight} (cm)
+                  </li>
+                  <li className="mb-2">
+                    <strong>Product height:</strong> {p1.productHeight} (cm)
+                  </li>
+                  <li>
+                    <strong>Total:</strong>{" "}
+                    {(p1.shelveHeight - d.field1) / p1.productHeight}
+                  </li>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
 
-        <div className="shelve font-weight-bold">A - 2: Tylolhot</div>
-
-        <div className="prodDetails mb-4">
-          {this.state.distance.map((d) => (
-            <div className="pt-3 pb-3 ml-3">
-              <li>
-                <strong>Sensor data:</strong> {d.field1}
-              </li>
-              <li>
-                <strong>Product:</strong> Tylolhot
-              </li>
-              
-              <li className="mb-4">
-                <strong>Product weight:</strong> 10(gr)
-              </li>
-              <li>
-                <strong>Total:</strong> {d.field1/10}
-              </li>
+        {this.state.shelveTwo.map((p2) => (
+          <div>
+            <div className="shelve font-weight-bold">A - 1: {p2.name}</div>
+            <div className="prodDetails">
+              {this.state.distance.map((d) => (
+                <div className="pt-3 pb-3 ml-3">
+                  <li>
+                    <strong>Sensor data:</strong> {d.field1}
+                  </li>
+                  <li>
+                    <strong>Product:</strong> {p2.name}
+                  </li>
+      
+                  <li className="mb-2">
+                    <strong>Product weight:</strong> {p2.productWeight} (gr)
+                  </li>
+                  <li>
+                    <strong>Total:</strong>{" "}
+                    { d.field1 / p2.productWeight}
+                  </li>
+                </div>
+              ))}
             </div>
-            
-          ))}
-        </div>
+          </div>
+        ))}
       </body>
     );
   }

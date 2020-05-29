@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+@import '~antd/dist/antd.css';
+
+.container {
+  width: 80%;
+  padding: 12px;
+  margin: 0 auto;
+}

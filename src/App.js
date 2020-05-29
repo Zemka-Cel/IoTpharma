@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route, NavLink, Link } from "react-router-dom";
 
 import Homescreen from "./views/HomeScreen";
 import DetailsScreen from "./views/DetailsScreen";
-import Edit from "./views/Edit";
+import EditForm from "./views/EditForm";
 
 function App() {
   return (
@@ -29,17 +29,21 @@ function App() {
           <a href="/edit" className="nav-link text-white">
             Edit
           </a>
+          
+         
         </nav>
 
         <div className="container mt-3">
           <Switch>
             <Route exact path={["/", "/HomeScreen"]} component={Homescreen} />
             <Route exact path="/details" component={DetailsScreen} />
-            <Route path="/edit" component={Edit} />
+            <Route path="/edit" component={EditForm} />
+
+
           </Switch>
         </div>
       </div>
-      <nav className="navbar navbar-expand text-white" id="center">
+      <nav className="navbar navbar-expand text-white mt-5" id="center">
         &copy; Copyright - Azemina Celebic 2020
       </nav>
     </BrowserRouter>
