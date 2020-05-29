@@ -1,0 +1,18 @@
+{
+  "shelveOne": [
+    {
+      "id": 1,
+      "name": "Aspirin",
+      "shelveHeight": 25,
+      "productHeight": 5
+    }
+  ],
+  "shelveTwo": [
+    {
+      "id": 1,
+      "name": "Tylolhot",
+      "productWeight": 10
+    }
+    
+  ]
+}
