@@ -1,7 +1,8 @@
 import React from "react";
 import "../style/DetailsScreenStyle.css";
 import Axios from "axios";
-import products from "../service/api";
+
+import {FiEdit} from "react-icons/fi";
 
 class DetailsScreen extends React.Component {
   constructor() {
@@ -33,7 +34,7 @@ class DetailsScreen extends React.Component {
         <h3 className="text-center mb-4">Shelves Map</h3>
         {this.state.shelveOne.map((p1) => (
           <div>
-            <div className="shelve font-weight-bold">A - 1: {p1.name}</div>
+            <div className="shelve font-weight-bold">Distance measuring shelf:  </div> 
             <div className="prodDetails">
               {this.state.distance.map((d) => (
                 <div className="pt-3 pb-3 ml-3">
@@ -44,7 +45,7 @@ class DetailsScreen extends React.Component {
                     <strong>Product:</strong> {p1.name}
                   </li>
                   <li>
-                    <strong>Shelve height:</strong> {p1.shelveHeight} (cm)
+                    <strong>Shelf height:</strong> {p1.shelveHeight} (cm)
                   </li>
                   <li className="mb-2">
                     <strong>Product height:</strong> {p1.productHeight} (cm)
@@ -61,7 +62,7 @@ class DetailsScreen extends React.Component {
 
         {this.state.shelveTwo.map((p2) => (
           <div>
-            <div className="shelve font-weight-bold">A - 1: {p2.name}</div>
+            <div className="shelve font-weight-bold">Weight measuring shelf:</div>
             <div className="prodDetails">
               {this.state.distance.map((d) => (
                 <div className="pt-3 pb-3 ml-3">
