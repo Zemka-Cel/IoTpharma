@@ -8,8 +8,8 @@ import { BrowserRouter, Switch, Route, NavLink, Link } from "react-router-dom";
 import Homescreen from "./views/HomeScreen";
 import DetailsScreen from "./views/DetailsScreen";
 import Form from "./views/FormOne";
-import MyForm from "./views/MyForm";
-import EditedShelveOne from "./views/FormEdited";
+
+import FormEdited from "./views/FormEdited";
 
 
 const App = () => {
@@ -40,13 +40,8 @@ const App = () => {
           <Switch>
             <Route exact path={["/", "/HomeScreen"]} component={Homescreen} />
             <Route exact path="/details" component={DetailsScreen} />
-            <Route path="/edit" component={Form} />
-            <Route path="/myform" component={MyForm} />
-            <Route path="/edit/:id" component={EditedShelveOne} />
-
-
-
-
+            <Route path="/edit" component={FormEdited} />
+            <Route path="/edit/:id" component={FormEdited} />
           </Switch>
         </div>
       </div>

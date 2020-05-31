@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Input, message, Row, Col } from "antd";
+import { Form, Button, Input, message } from "antd";
 
 const layout = { labelCol: { span: 8 }, wrapperCol: { span: 16 } };
 
@@ -24,7 +24,7 @@ const FormOne = ({ onSubmit }) => {
       <div className="prodDetails">
         <div className="pt-3 pb-3 ml-3">
           <Form
-            className="mr-2"
+            className="mr-3"
             {...layout}
             form={form}
             onFinish={onFinish}

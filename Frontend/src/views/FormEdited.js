@@ -6,13 +6,13 @@ const FormEdited = ({ history }) => {
 
   const onSubmit = async (values) => {
     console.log(values);
-    await shelveOne.post('/shelveOne', values);
+    await shelveOne.put('/shelveOne/1', values);
     history.push('/');
   }
 
   return (
     <div>
-      <h1>Create Book</h1>
+     
       <Form onSubmit={onSubmit} />
     </div>
   );

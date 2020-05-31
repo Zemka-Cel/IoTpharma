@@ -20,14 +20,14 @@ class HomeScreen extends React.Component {
 
   render() {
     return (
-      <body>
+      <div>
         <h1 className="text-center mt-5">
           Welcome to <br></br> IoT pharmacy
         </h1>
         <p className="text-center font-weight-bold">Proof of concept</p>
         <main>
           {this.state.distance.map((d) => (
-            <div id="distance" className="text-center">
+            <div id="distance" className="text-center" key={d.field1}>
               <p>
                 <strong>Distance =</strong> {d.field1} (cm)
               </p>
@@ -35,7 +35,7 @@ class HomeScreen extends React.Component {
           ))}
 
           {this.state.distance.map((d) => (
-            <div id="weight" className="text-center">
+            <div id="weight" className="text-center" key={d.field1}>
               <p>
                 <strong>Weight =</strong> {d.field1} (gr)
               </p>
@@ -45,13 +45,13 @@ class HomeScreen extends React.Component {
         <div className="d-flex justify-content-center">
           <button
             onClick={() => this.props.history.push("/details")}
-            class="button mt-xl-5 btn text-white lead flex-fill ml-1 mr-1"
+            className="button mt-xl-5 btn text-white lead flex-fill ml-1 mr-1"
             type="button"
           >
             See the details
           </button>
         </div>
-      </body>
+      </div>
     );
   }
 }
