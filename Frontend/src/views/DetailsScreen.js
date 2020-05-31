@@ -3,6 +3,7 @@ import "../style/DetailsScreenStyle.css";
 import Axios from "axios";
 
 import {FiEdit} from "react-icons/fi";
+import { Button } from "antd";
 
 class DetailsScreen extends React.Component {
   constructor() {
@@ -34,7 +35,7 @@ class DetailsScreen extends React.Component {
         <h3 className="text-center mb-4">Shelves Map</h3>
         {this.state.shelveOne.map((p1) => (
           <div>
-            <div className="shelve font-weight-bold">Distance measuring shelf:  </div> 
+             <div className="shelve font-weight-bold d-flex justify-content-between"><p className="p-1 m-0">Distance measuring shelf:</p> <Button  onClick={() => this.props.history.push("/edit")}><FiEdit></FiEdit></Button></div> 
             <div className="prodDetails">
               {this.state.distance.map((d) => (
                 <div className="pt-3 pb-3 ml-3">
@@ -62,7 +63,7 @@ class DetailsScreen extends React.Component {
 
         {this.state.shelveTwo.map((p2) => (
           <div>
-            <div className="shelve font-weight-bold">Weight measuring shelf:</div>
+            <div className="shelve font-weight-bold d-flex justify-content-between"><p className="p-1 m-0">Weight measuring shelf:</p> <Button  onClick={() => this.props.history.push("/editTwo")}><FiEdit></FiEdit></Button></div>
             <div className="prodDetails">
               {this.state.distance.map((d) => (
                 <div className="pt-3 pb-3 ml-3">

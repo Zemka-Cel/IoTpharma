@@ -10,6 +10,7 @@ import DetailsScreen from "./views/DetailsScreen";
 import Form from "./views/FormOne";
 
 import FormEdited from "./views/FormEdited";
+import FormTwoEdit from "./views/FormTwoEdit";
 
 
 const App = () => {
@@ -29,9 +30,7 @@ const App = () => {
               </Link>
             </li>
           </div>
-          <a href="/edit" className="nav-link text-white">
-            Edit
-          </a>
+         
           
          
         </nav>
@@ -41,7 +40,8 @@ const App = () => {
             <Route exact path={["/", "/HomeScreen"]} component={Homescreen} />
             <Route exact path="/details" component={DetailsScreen} />
             <Route path="/edit" component={FormEdited} />
-            <Route path="/edit/:id" component={FormEdited} />
+            <Route path="/editTwo" component={FormTwoEdit}/>
+           {/* <Route path="/edit/:id" component={FormEdited} /> */}
           </Switch>
         </div>
       </div>
