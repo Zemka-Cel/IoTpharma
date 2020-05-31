@@ -1,40 +1,17 @@
 {
   "shelveOne": [
     {
-      "id": 1,
-      "name": "testiramojos",
-      "shelveHeight": 25,
-      "productHeight": 5
+      "name": "Aspirin",
+      "shelveHeight": "20",
+      "productHeight": "8",
+      "id": 1
     }
   ],
   "shelveTwo": [
     {
-      "id": 1,
-      "name": "Tylolhot",
-      "productWeight": 10
-    }
-  ],
-  "books": [
-    {
-      "id": "1",
-      "title": "Bašta šljezove boje",
-      "author": "Branko Copic",
-      "price": "9.95",
-      "pages": "99"
-    },
-    {
-      "id": "2",
-      "title": "Patuljak vam prica",
-      "author": "Ahmet Hromadzic",
-      "price": "8.95",
-      "pages": "104"
-    },
-    {
-      "id": "3",
-      "title": "Bajke starih naroda",
-      "author": "Grupa autora",
-      "price": "12.95",
-      "pages": "188"
+      "name": "TylolHot",
+      "productWeight": "100",
+      "id": 1
     }
   ]
 }
