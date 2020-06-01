@@ -12,6 +12,7 @@ class DetailsScreen extends React.Component {
       distance: [],
       shelveOne: [],
       shelveTwo: [],
+      weight: [],
     };
   }
 
@@ -26,6 +27,11 @@ class DetailsScreen extends React.Component {
     });
     Axios.get("http://localhost:4300/shelveTwo").then((response) => {
       this.setState({ shelveTwo: response.data });
+    });
+    Axios.get(
+      "https://api.thingspeak.com/channels/1072482/fields/1.json?api_key=3GQ72KTV2JNUC4I2&results=1"
+    ).then((response) => {
+      this.setState({ weight: response.data.feeds });
     });
   }
 
@@ -65,7 +71,7 @@ class DetailsScreen extends React.Component {
           <div>
             <div className="shelve font-weight-bold d-flex justify-content-between"><p className="p-1 m-0">Weight measuring shelf:</p> <Button  onClick={() => this.props.history.push("/editTwo")}><FiEdit></FiEdit></Button></div>
             <div className="prodDetails">
-              {this.state.distance.map((d) => (
+              {this.state.weight.map((d) => (
                 <div className="pt-3 pb-3 ml-3">
                   <li>
                     <strong>Sensor data:</strong> {d.field1}

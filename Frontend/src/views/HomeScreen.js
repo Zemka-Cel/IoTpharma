@@ -7,6 +7,7 @@ class HomeScreen extends React.Component {
     super();
     this.state = {
       distance: [],
+      weight: [],
     };
   }
 
@@ -15,6 +16,11 @@ class HomeScreen extends React.Component {
       "https://api.thingspeak.com/channels/1064445/fields/1.json?results=1&SBN517D6DY76WTTY"
     ).then((response) => {
       this.setState({ distance: response.data.feeds });
+    });
+    Axios.get(
+      "https://api.thingspeak.com/channels/1072482/fields/1.json?api_key=3GQ72KTV2JNUC4I2&results=1"
+    ).then((response) => {
+      this.setState({ weight: response.data.feeds });
     });
   }
 
@@ -34,7 +40,7 @@ class HomeScreen extends React.Component {
             </div>
           ))}
 
-          {this.state.distance.map((d) => (
+          {this.state.weight.map((d) => (
             <div id="weight" className="text-center" key={d.field1}>
               <p>
                 <strong>Weight =</strong> {d.field1} (gr)
