@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Input, message } from "antd";
 
-const layout = { labelCol: { span: 8 }, wrapperCol: { span: 16 } };
+const layout = { labelCol: { span: 8 }, wrapperCol: { span: 0 } };
 
 const FormTwo = ({ onSubmit }) => {
   const [form] = Form.useForm();

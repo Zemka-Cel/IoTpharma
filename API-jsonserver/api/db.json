@@ -2,15 +2,15 @@
   "shelveOne": [
     {
       "name": "Aspirin",
-      "shelveHeight": "30",
-      "productHeight": "5",
+      "shelveHeight": "20",
+      "productHeight": "2",
       "id": 1
     }
   ],
   "shelveTwo": [
     {
-      "name": "TylolHot",
-      "productWeight": "10",
+      "name": "zemkica",
+      "productWeight": "15",
       "id": 1
     }
   ]

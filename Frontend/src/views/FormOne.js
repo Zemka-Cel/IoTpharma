@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Input, message } from "antd";
 
-const layout = { labelCol: { span: 8 }, wrapperCol: { span: 16 } };
+const layout = { labelCol: { span: 8 }, wrapperCol: { span: 0 } };
 
 const FormOne = ({ onSubmit }) => {
   const [form] = Form.useForm();
@@ -22,9 +22,9 @@ const FormOne = ({ onSubmit }) => {
         Editing distance measuring shelf:
       </div>
       <div className="prodDetails">
-        <div className="pt-3 pb-3 ml-3">
+        <div className="pt-3 pb-3 ml-3 ">
           <Form
-            className="mr-3"
+            className="mr-3 d-center"
             {...layout}
             form={form}
             onFinish={onFinish}
@@ -39,8 +39,8 @@ const FormOne = ({ onSubmit }) => {
                 </li>
                 <li>
                   <strong>Shelf height (cm):</strong>
-                  <Form.Item name="shelveHeight">
-                    <Input className="font-weight-bold" type="number" />
+                  <Form.Item name="shelveHeight" className="w-100">
+                    <Input className="font-weight-bold pr-5" type="number" />
                   </Form.Item>
                 </li>
                 <li className="mb-2">

@@ -33,6 +33,7 @@ class DetailsScreen extends React.Component {
     ).then((response) => {
       this.setState({ weight: response.data.feeds });
     });
+    // interval 5000 
   }
 
   render() {

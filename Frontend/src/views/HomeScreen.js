@@ -12,6 +12,13 @@ class HomeScreen extends React.Component {
   }
 
   componentDidMount() {
+   this.getData();
+   this.interval = setInterval(()=>{
+     this.getData();
+    }, 2000 );
+  }
+
+  getData(){
     Axios.get(
       "https://api.thingspeak.com/channels/1064445/fields/1.json?results=1&SBN517D6DY76WTTY"
     ).then((response) => {
@@ -22,6 +29,10 @@ class HomeScreen extends React.Component {
     ).then((response) => {
       this.setState({ weight: response.data.feeds });
     });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {

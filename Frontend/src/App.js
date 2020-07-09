@@ -16,7 +16,7 @@ import FormTwoEdit from "./views/FormTwoEdit";
 const App = () => {
   return (
     <BrowserRouter>
-      <div>
+      <div className="test">
         <nav className="navbar navbar-expand text-white">
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -44,10 +44,11 @@ const App = () => {
            {/* <Route path="/edit/:id" component={FormEdited} /> */}
           </Switch>
         </div>
-      </div>
-      <nav className="navbar navbar-expand text-white mt-5" id="center">
+     
+      <nav className="navbar navbar-expand text-white  " id="center">
         &copy; Copyright - Azemina Celebic 2020
       </nav>
+      </div>
     </BrowserRouter>
   );
 }

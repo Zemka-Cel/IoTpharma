@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 100%;
 }
 
 .App-logo {
@@ -43,4 +44,15 @@
   width: 80%;
   padding: 12px;
   margin: 0 auto;
+  min-height: 80vh;
+}
+
+.test{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.test:last-child{
+  flex-grow: inherit;
 }
